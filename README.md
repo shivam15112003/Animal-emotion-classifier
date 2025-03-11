@@ -21,7 +21,7 @@ This project implements an **AI-powered animal detection model** using **compute
 1. Clone the repository:
    ```sh
    git clone https://github.com/shivam15112003/animal_emotion_detection.git
-   cd Animal-Detection-Model
+   cd Animal_Detection_Model
    ```
 2. Install dependencies:
    ```sh
@@ -43,7 +43,7 @@ This project implements an **AI-powered animal detection model** using **compute
 ## 📈 Model Training Details
 - Uses **MobileNetV2** as a pre-trained model with additional custom layers.
 - Trained on **9 different classes** with augmentation techniques.
-- Achieved **81% accuracy** on the training dataset.
+- Achieved **91% accuracy** on the training dataset.
 
 ## 📈 Future Enhancements
 - Improve model accuracy with more dataset training.
