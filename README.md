@@ -76,7 +76,6 @@ Trained for 10 epochs using Adam optimizer and categorical crossentropy loss.
 
 ## 📈 Performance
 
-* Trained on: 362 images
 * Final Training Accuracy: \~95%
 * Test Accuracy: \~91%
 
