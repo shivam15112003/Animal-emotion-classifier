@@ -1,52 +1,101 @@
-# 🐾 Animal Detection Model
+# 🐾 Animal Emotion Classifier
 
-## 📌 Overview
-This project implements an **AI-powered animal detection model** using **computer vision and deep learning**. It can identify various animal species and their emotions in images or videos, making it useful for **wildlife monitoring, security, and conservation efforts**.
+This project implements an AI-powered image classification system using **MobileNetV2** to detect and classify **animal emotions** from images. It includes preprocessing, data augmentation, training, validation, and real-time prediction using a file-based input system and Tkinter popups.
 
-## 🚀 Features
-- **Real-time animal detection** in images and videos.
-- Uses **MobileNetV2-based CNN model** for object classification.
-- Supports **emotion recognition** for different animal species.
-- Optimized for **high accuracy and low latency**.
-- Can be integrated with **IoT devices** for smart surveillance.
+---
 
-## 🔧 Technologies Used
-- **Python**
-- **TensorFlow / Keras** (for deep learning and training the model)
-- **OpenCV** (for image preprocessing and visualization)
-- **NumPy** (for handling image arrays and data processing)
-- **Tkinter** (for displaying prediction results via pop-up messages)
+## 📌 Features
 
-## 📂 Installation & Usage
+* 🧠 Built on **MobileNetV2** with transfer learning
+* 🖼️ Processes and classifies images into 9 emotion classes
+* 🔄 Includes **data augmentation** (rotation, zoom, flip, etc.)
+* 🧪 Tracks validation accuracy using a built-in split
+* 📊 Evaluation on separate test dataset
+* 🖥️ Real-time batch prediction with Tkinter pop-up results
+
+---
+
+## 🗂️ Dataset Structure
+
+Organize your data into:
+
+```
+datasets/
+├── emotion_trainingdataset/
+│   ├── class1/
+│   ├── class2/
+│   └── ...
+├── emotion_testingdatasets/
+│   ├── class1/
+│   ├── class2/
+│   └── ...
+└── prediction_datasets/
+    └── *.jpg / *.png / *.jpeg
+```
+
+Each class folder should contain labeled images corresponding to a specific animal emotion.
+
+---
+
+## 🚀 Getting Started
+
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/shivam15112003/animal_emotion_detection.git
-   cd Animal_Detection_Model
-   ```
-2. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. Train the model:
-   ```sh
-   jupyter notebook emotional_detectionmodel.ipynb
-   ```
-4. Run real-time detection using a webcam:
-   ```sh
-   Run detection cells in the Jupyter notebook
-   ```
-5. Predict from an image:
-   ```sh
-   Use the Jupyter notebook for image predictions
-   ```
 
-## 📈 Model Training Details
-- Uses **MobileNetV2** as a pre-trained model with additional custom layers.
-- Trained on **9 different classes** with augmentation techniques.
-- Achieved **91% accuracy** on the training dataset.
+```bash
+git clone https://github.com/yourusername/animal_emotion_classifier.git
+cd animal_emotion_classifier
+```
 
-## 📈 Future Enhancements
-- Improve model accuracy with more dataset training.
-- Deploy as a **web-based API** for easy integration.
-- Optimize for **edge devices** like Raspberry Pi.
-- Implement real-time alert notifications for detected animals.
+2. Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the classifier:
+
+```bash
+python animal_emotion_classifier.py
+```
+
+---
+
+## 🧠 Model Architecture
+
+* **Base Model**: MobileNetV2 (frozen)
+* **Classifier Head**:
+
+  * GlobalAveragePooling2D
+  * Dense(128, relu)
+  * Dropout(0.5)
+  * Dense(9, softmax)
+
+Trained for 10 epochs using Adam optimizer and categorical crossentropy loss.
+
+---
+
+## 📈 Performance
+
+* Trained on: 362 images
+* Final Training Accuracy: \~95%
+* Test Accuracy: \~91%
+
+---
+
+## 📦 Dependencies
+
+* TensorFlow
+* NumPy
+* OpenCV (for display)
+* Tkinter (for GUI popup)
+
+---
+
+## 🙋 Author
+
+**Shivam Sharma**
+GitHub: [@shivam15112003](https://github.com/shivam15112003)
+
+---
+
+Feel free to fork this repo, contribute, or adapt it for multi-species or behavior analysis projects!
