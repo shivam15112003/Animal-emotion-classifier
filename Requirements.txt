@@ -1,8 +1,7 @@
-tensorflow
-opencv-python
+tensorflow>=2.9.0
 numpy
-tkinter
-matplotlib
-p-utils
-p-base
+opencv-python
+Pillow
 scikit-learn
+matplotlib
+tk
