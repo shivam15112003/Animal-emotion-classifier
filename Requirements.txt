@@ -1,7 +1,9 @@
-tensorflow>=2.9.0
+tensorflow 
 numpy
 opencv-python
 Pillow
 scikit-learn
 matplotlib
 tk
+os
+json
