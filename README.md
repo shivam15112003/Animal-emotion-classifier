@@ -70,7 +70,7 @@ python animal_emotion_classifier.py
   * Dropout(0.5)
   * Dense(9, softmax)
 
-Trained for 10 epochs using Adam optimizer and categorical crossentropy loss.
+Trained for 30 epochs using Adam optimizer and categorical crossentropy loss.
 
 ---
 
